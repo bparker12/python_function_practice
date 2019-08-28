@@ -10,9 +10,9 @@ piggyBank = {
 }
 
 def convert_to_change(dollarAmount, quarters, dimes, nickels, pennies):
-    piggyBank["pennies"] = (dollarAmount - (dollarAmount - pennies*.01))/.01
-    piggyBank["nickels"] = (dollarAmount - (dollarAmount - nickels*.05))/.05
-    piggyBank["dimes"] = (dollarAmount - (dollarAmount - dimes*.1))/.1
+    piggyBank["pennies"] = int((dollarAmount - (dollarAmount - pennies*.01))/.01)
+    piggyBank["nickels"] = int((dollarAmount - (dollarAmount - nickels*.05))/.05)
+    piggyBank["dimes"] = round((dollarAmount - (dollarAmount - dimes*.1))/.1)
     piggyBank["quarters"] = (dollarAmount - (dollarAmount - quarters*.25))/.25
 
     print(piggyBank)
